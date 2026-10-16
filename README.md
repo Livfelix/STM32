@@ -38,4 +38,3 @@ Na revisão publicada, a suíte possui 133 testes aprovados. Isso valida softwar
 ## Estado do hardware
 
 Não energize a montagem apenas com base nos diagramas. Confirme continuidade, ausência de curto, pinagem da revisão física da placa, tensão de 5,00 V, VEXC, corrente da célula e os ensaios descritos em `REGISTRO_BANCADA.md`.
-

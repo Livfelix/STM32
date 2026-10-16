@@ -1,0 +1,61 @@
+import fs from 'node:fs/promises';
+import assert from 'node:assert/strict';
+import { createRequire } from 'node:module';
+import { pathToFileURL } from 'node:url';
+import path from 'node:path';
+const [dataPath,outPath,qa] = process.argv.slice(2);
+const runtimeRequire = createRequire(path.resolve(qa,'package.json'));
+const { FileBlob, SpreadsheetFile, Workbook } = await import(pathToFileURL(runtimeRequire.resolve('@oai/artifact-tool')).href);
+if(dataPath==='--preview-original'){
+  const w=await SpreadsheetFile.importXlsx(await FileBlob.load(outPath));
+  console.log((await w.inspect({kind:'workbook',maxChars:1500})).ndjson);
+  const p=await w.render({sheetName:w.worksheets.getItemAt(0).name,range:'A1:H16',scale:1});
+  await fs.writeFile(`${qa}/bom-before.png`,new Uint8Array(await p.arrayBuffer()));
+  process.exit(0);
+}
+const rows=JSON.parse(await fs.readFile(dataPath,'utf8'));
+const wb=Workbook.create(), s=wb.worksheets.add('BOM_FINAL');
+s.showGridLines=false; s.tabColor='#23445A';
+s.getRange('A2').values=[['SG6 - materiais para montagem mista (15/10/2026)']];
+s.getRange('A3').values=[['6 entradas, 9 gauges. Confirmado = declaração específica do usuário; inspeção física pendente.']];
+s.getRange('A4').values=[['Pendente não significa zero. Sem preços ou autonomia presumidos. Ver manual revisado e guias atuais.']];
+s.getRange('A6:I6').values=[['ID','Componente','Necessário (un/conj)','Compra declarada','Qtd confirmada','Falta','Reserva','', 'Observação / fonte']];
+const end=6+rows.length;
+s.getRange(`A7:I${end}`).values=rows.map(r=>[r.id,r.component,r.necessary,r.declared,r.confirmed??'Pendente',null,null,null,r.note]);
+rows.forEach((r,i)=>{
+  const n=i+7;
+  s.getRange(`F${n}`).formulas=[[`=IF(ISNUMBER(E${n}),MAX(0,C${n}-E${n}),"Pendente")`]];
+  s.getRange(`G${n}`).formulas=[[`=IF(ISNUMBER(E${n}),MAX(0,E${n}-C${n}),"Pendente")`]];
+});
+s.getRange(`A2:I${end}`).format.font={name:'Arial',size:11,color:'#233444'};
+s.getRange('A2').format.font={name:'Arial',size:16,bold:true,color:'#233444'};
+s.getRange('A3:A4').format.font={name:'Arial',size:11,italic:true,color:'#526171'};
+[140,320,140,270,145,115,115,24,665].forEach((w,i)=>s.getRange(`${String.fromCharCode(65+i)}2:${String.fromCharCode(65+i)}${end}`).format.columnWidthPx=w);
+s.getRange('A6:G6').format={fill:'#23445A',font:{name:'Arial',size:11,bold:true,color:'#FFFFFF'},rowHeightPx:44,wrapText:true,horizontalAlignment:'center',verticalAlignment:'center'};
+s.getRange(`A7:G${end}`).format={rowHeightPx:52,verticalAlignment:'center',wrapText:true};
+s.getRange(`C7:G${end}`).format.horizontalAlignment='right';
+s.getRange(`D7:D${end}`).format.horizontalAlignment='left';
+s.getRange(`I7:I${end}`).format={wrapText:true,verticalAlignment:'center'};
+s.getRange(`C7:C${end}`).setNumberFormat('0'); s.getRange(`E7:G${end}`).setNumberFormat('0');
+s.getRange(`E7:E${end}`).format.fill='#FFF0D0';
+s.getRange(`F7:G${end}`).conditionalFormats.add('containsText',{text:'Pendente',format:{font:{color:'#9D5414'}}});
+s.getRange('I6').values=[['Fonte: especificação SG6 integridade/bateria, 15/10/2026, seções 2, 7 e 8; estoque declarado.']];
+s.getRange('I6').format={font:{name:'Arial',size:11,bold:true},wrapText:true};
+s.freezePanes.freezeRows(6); s.freezePanes.freezeColumns(2);
+const opa=rows.findIndex(r=>r.id==='opa')+7, pending=rows.findIndex(r=>r.id==='ref1k')+7;
+assert.equal(s.getRange(`G${opa}`).values[0][0],8); assert.equal(s.getRange(`F${opa}`).values[0][0],0);
+assert.equal(s.getRange(`F${pending}`).values[0][0],'Pendente');
+s.getRange(`E${pending}`).values=[[0]]; assert.equal(s.getRange(`F${pending}`).values[0][0],12);
+s.getRange(`E${pending}`).values=[['Pendente']]; wb.recalculate();
+rows.forEach((r,i)=>{assert.equal(s.getRange(`F${i+7}`).values[0][0],r.missing??'Pendente');assert.equal(s.getRange(`G${i+7}`).values[0][0],r.reserve??'Pendente');});
+const inspection=await wb.inspect({kind:'table',range:`BOM_FINAL!A7:I${end}`,include:'values,formulas',tableMaxRows:rows.length,tableMaxCols:9,maxChars:60000});
+await fs.writeFile(`${qa}/bom-inspection.ndjson`,inspection.ndjson);
+const errors=await wb.inspect({kind:'match',searchTerm:'#REF!|#DIV/0!|#VALUE!|#NAME\\?|#N/A|#NUM!|#NULL!|#SPILL!|#CALC!',options:{useRegex:true,maxResults:300},summary:'final formula scan',maxChars:3000});
+await fs.writeFile(`${qa}/bom-errors.ndjson`,errors.ndjson);
+console.log(errors.ndjson);
+for(let first=1;first<=end;first+=12){
+  const p=await wb.render({sheetName:'BOM_FINAL',range:`A${first}:I${Math.min(end,first+11)}`,scale:1,format:'png'});
+  await fs.writeFile(`${qa}/bom-${first}.png`,new Uint8Array(await p.arrayBuffer()));
+}
+await(await SpreadsheetFile.exportXlsx(wb)).save(outPath);
+console.log(`BOM salva: ${rows.length} itens, fórmulas recalculadas; OPA reserva8; pendentes preservados.`);

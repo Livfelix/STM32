@@ -1,0 +1,9 @@
+#SG6BIN2 ch=09 pga=1 drate_x10=5000 spsch_x10=2050 fc_x10=0 avg=1 vexc_mv=5000 bias_valid=00 zero_valid=00 cal_valid=00 time=boot_relative_us scan=sequential uart_max_sps=1000 fat_date=placeholder unit=0.1ue inactive=INT32_MAX encoding=IEEE754_HEX_F32
+#CH0 type=HALF_BENDING gf_f32=40051EB8 gain_f32=42C80000 bias_v_f32=00000000 zero_ratio_f32=00000000 scale_f32=3F800000
+#CH1 type=HALF_BENDING gf_f32=40051EB8 gain_f32=42C80000 bias_v_f32=00000000 zero_ratio_f32=00000000 scale_f32=3F800000
+#CH2 type=HALF_BENDING gf_f32=40051EB8 gain_f32=42C80000 bias_v_f32=00000000 zero_ratio_f32=00000000 scale_f32=3F800000
+#CH3 type=QUARTER gf_f32=40051EB8 gain_f32=42C80000 bias_v_f32=00000000 zero_ratio_f32=00000000 scale_f32=3F800000
+#CH4 type=QUARTER gf_f32=40051EB8 gain_f32=42C80000 bias_v_f32=00000000 zero_ratio_f32=00000000 scale_f32=3F800000
+#CH5 type=QUARTER gf_f32=40051EB8 gain_f32=42C80000 bias_v_f32=00000000 zero_ratio_f32=00000000 scale_f32=3F800000
+#TRIGGER enabled=0 channel=0 level_x10=0 pre_ms=500 post_ms=2000 effective_fc_x10=0 analog_hz=499 analog_q_x1000=742 alias_protection=unverified
+#ENDHDR

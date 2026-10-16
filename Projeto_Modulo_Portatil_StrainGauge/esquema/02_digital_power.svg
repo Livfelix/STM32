@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" font-family="Arial, sans-serif"><rect width="1400" height="1000" fill="white"/>
+<text x="35" y="39" font-size="27" fill="#223447" font-weight="bold">02 - Digital, energia e programação</text>
+<text x="35" y="71" font-size="19" fill="#526171" font-weight="normal">Numeração pelos símbolos originais da placa; conferir serigrafia e continuidade. Não alimentar pelo ST-Link clone.</text>
+<rect x="35" y="105" width="660" height="260" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="50" y="134" font-size="21" fill="#223447" font-weight="bold">Alimentação por nós</text>
+<text x="50" y="163" font-size="19" fill="#223447" font-weight="normal">Célula1S / TP4056 / proteção: identificar terminais reais</text>
+<text x="50" y="188" font-size="19" fill="#223447" font-weight="normal">OUT+ protegido -&gt; chave -&gt; SW_BAT+ -&gt; MT3608 IN+</text>
+<text x="50" y="213" font-size="19" fill="#223447" font-weight="normal">Boost OUT+5.00V -&gt;J2-2 eLCD1; OUT- -&gt;J2-1 eLCD2</text>
+<text x="50" y="238" font-size="19" fill="#223447" font-weight="normal">J2 -&gt;L1 -&gt;C1+ =VEXC para pontes/CJ/OPA</text>
+<text x="50" y="263" font-size="19" fill="#223447" font-weight="normal">P5 AGND retorno analógico; P9-2 GND retornoSD</text>
+<text x="50" y="288" font-size="19" fill="#223447" font-weight="normal">P9-1 VDD3.3V -&gt;SD3V3; OUT- protegido -&gt;MT IN-/GND</text>
+<text x="50" y="313" font-size="19" fill="#223447" font-weight="normal">Carga só OFF; LEDs TP4056 visíveis na caixa</text>
+<text x="50" y="338" font-size="19" fill="#223447" font-weight="normal">CHRG/STDBY sem GPIO; sem estado de carga na tela</text>
+<rect x="735" y="105" width="630" height="260" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="750" y="134" font-size="21" fill="#223447" font-weight="bold">MSP2807: todos os14 pinos</text>
+<text x="750" y="163" font-size="19" fill="#223447" font-weight="normal">1VCC5V/J1 aberto; 2GND; IO3.3V</text>
+<text x="750" y="188" font-size="19" fill="#223447" font-weight="normal">3CS PA4/P8-7; 4RST PA2/P8-5; 5DC PA3/P8-6</text>
+<text x="750" y="213" font-size="19" fill="#223447" font-weight="normal">6SDI PA7/P8-10; 7SCK PA5/P8-8; 8LED PA1/P8-4</text>
+<text x="750" y="238" font-size="19" fill="#223447" font-weight="normal">9SDO aberto; 10T_CLK PA5; 11T_CS PA0/P8-3</text>
+<text x="750" y="263" font-size="19" fill="#223447" font-weight="normal">12T_DIN PA7; 13T_DO PA6/P8-9; 14T_IRQ PB1/P8-12</text>
+<text x="750" y="288" font-size="19" fill="#223447" font-weight="normal">Slot SD da tela sem uso; R3 é SD_CLK, não MISO</text>
+<rect x="35" y="405" width="660" height="180" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="50" y="434" font-size="21" fill="#223447" font-weight="bold">SPI1 compartilhado / SD externo</text>
+<text x="50" y="463" font-size="19" fill="#223447" font-weight="normal">PA5 SCK, PA7 MOSI, PA6 MISO</text>
+<text x="50" y="488" font-size="19" fill="#223447" font-weight="normal">SD CS PA8/P9-3; SD3V3 P9-1; SDGND P9-2</text>
+<text x="50" y="513" font-size="19" fill="#223447" font-weight="normal">CS LCD/toque/SD pull-up10k -&gt;3.3V</text>
+<text x="50" y="538" font-size="19" fill="#223447" font-weight="normal">LCD/SD9MHz; toque1.125MHz; initSD281.25kHz</text>
+<text x="50" y="563" font-size="19" fill="#223447" font-weight="normal">Verificar liberaçãoMISO em bancada</text>
+<rect x="735" y="405" width="630" height="180" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="750" y="434" font-size="21" fill="#223447" font-weight="bold">PC: dados com aparelho na bateria</text>
+<text x="750" y="463" font-size="19" fill="#223447" font-weight="normal">P4-1 PA9 TX -&gt;RX USB-UART lógica3.3V</text>
+<text x="750" y="488" font-size="19" fill="#223447" font-weight="normal">P4-3 GND -&gt;GND adaptador; 9216008N1</text>
+<text x="750" y="513" font-size="19" fill="#223447" font-weight="normal">P4-2 PA10 aberto; MAX232 também dirige RX</text>
+<text x="750" y="538" font-size="19" fill="#223447" font-weight="normal">TX/VCC do adaptador desconectados</text>
+<text x="750" y="563" font-size="19" fill="#223447" font-weight="normal">Sem alimentaçãoUSB/PowerPath; carga sóOFF</text>
+<rect x="35" y="625" width="660" height="270" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="50" y="654" font-size="21" fill="#223447" font-weight="bold">ST-Link clone -&gt; JTAG1 SWD</text>
+<text x="50" y="683" font-size="19" fill="#223447" font-weight="normal">Clone1RST -&gt;JTAG1-15NRST (se necessário)</text>
+<text x="50" y="708" font-size="19" fill="#223447" font-weight="normal">Clone2SWCLK -&gt;JTAG1-9PA14</text>
+<text x="50" y="733" font-size="19" fill="#223447" font-weight="normal">Clone4SWDIO -&gt;JTAG1-7PA13</text>
+<text x="50" y="758" font-size="19" fill="#223447" font-weight="normal">Clone5/6GND -&gt;um par4..20GND</text>
+<text x="50" y="783" font-size="19" fill="#223447" font-weight="normal">Clone3SWIM aberto; 7/8 3.3V e9/10 5V abertos</text>
+<text x="50" y="808" font-size="19" fill="#223447" font-weight="normal">JTAG1-2 é VDD; não conectar saída do clone</text>
+<text x="50" y="833" font-size="19" fill="#223447" font-weight="normal">BOOT0/1=0; programação física ainda pendente</text>
+<rect x="735" y="625" width="630" height="270" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="750" y="654" font-size="21" fill="#223447" font-weight="bold">ADC interno e retorno / monitores</text>
+<text x="750" y="683" font-size="19" fill="#223447" font-weight="normal">SPI2 interno:PB12CS/PB13SCK/PB14DOUT/PB15DIN</text>
+<text x="750" y="708" font-size="19" fill="#223447" font-weight="normal">PB10DRDY/PB11RESET; modo1/1.125MHz</text>
+<text x="750" y="733" font-size="19" fill="#223447" font-weight="normal">ADR4525VREF2.5V; R16 ligaAINCOM aAGND</text>
+<text x="750" y="758" font-size="19" fill="#223447" font-weight="normal">J3ADC aberto. IN6 reserva; IN7 monitor bufferizado</text>
+<text x="750" y="783" font-size="19" fill="#223447" font-weight="normal">SW_BAT+ -&gt;10k -&gt;PB0/P8-11 -&gt;10k -&gt;GND</text>
+<text x="750" y="808" font-size="19" fill="#223447" font-weight="normal">STOP eclose antesOFF/cartão; sem latchauto-OFF</text>
+<text x="750" y="833" font-size="19" fill="#223447" font-weight="normal">100nF PB0/GND; medir PB0/VDD em OFF; P9-12 livre</text>
+<text x="35" y="964" font-size="18" fill="#526171" font-weight="normal">SG6 rev.15/10/2026 | Montagem nominal; confirmar PCB/lote, continuidade e desempenho em bancada.</text>
+</svg>

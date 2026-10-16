@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" font-family="Arial, sans-serif"><rect width="1400" height="1000" fill="white"/>
+<text x="35" y="39" font-size="27" fill="#223447" font-weight="bold">01 - Canal analógico: ponte física, filtro e monitor</text>
+<text x="35" y="71" font-size="19" fill="#526171" font-weight="normal">Os dois desenhos de ponte são estados alternativos do canal; trocar H/Q também exige sensor/fiação e recalibração.</text>
+<text x="40" y="110" font-size="21" fill="#223447" font-weight="bold">Q - CH3..5, JP_QH em saídaRA350</text>
+<line x1="90" y1="145" x2="610" y2="145" stroke="#223447" stroke-width="2.2" />
+<text x="430" y="136" font-size="18" fill="#223447" font-weight="normal">VEXC</text>
+<line x1="130" y1="145" x2="130" y2="170" stroke="#223447" stroke-width="2.2" />
+<line x1="130" y1="170" x2="130" y2="180" stroke="#223447" stroke-width="2.2" />
+<rect x="118" y="180" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="130" y1="225" x2="130" y2="235" stroke="#223447" stroke-width="2.2" />
+<text x="150" y="204" font-size="18" fill="#223447" font-weight="normal">RC1k</text>
+<line x1="130" y1="235" x2="130" y2="295" stroke="#223447" stroke-width="2.2" />
+<circle cx="130" cy="295" r="4" fill="#223447"/>
+<line x1="130" y1="295" x2="130" y2="305" stroke="#223447" stroke-width="2.2" />
+<rect x="118" y="305" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="130" y1="350" x2="130" y2="360" stroke="#223447" stroke-width="2.2" />
+<text x="150" y="329" font-size="18" fill="#223447" font-weight="normal">RD1k</text>
+<line x1="130" y1="360" x2="130" y2="440" stroke="#223447" stroke-width="2.2" />
+<line x1="340" y1="145" x2="340" y2="155" stroke="#223447" stroke-width="2.2" />
+<rect x="328" y="155" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="340" y1="200" x2="340" y2="210" stroke="#223447" stroke-width="2.2" />
+<text x="360" y="179" font-size="18" fill="#223447" font-weight="normal">RA350</text>
+<line x1="340" y1="210" x2="340" y2="240" stroke="#223447" stroke-width="2.2" />
+<text x="270" y="226" font-size="18" fill="#223447" font-weight="normal">W1</text>
+<circle cx="340" cy="240" r="4" fill="#223447"/>
+<line x1="340" y1="240" x2="340" y2="250" stroke="#223447" stroke-width="2.2" />
+<rect x="328" y="250" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="340" y1="295" x2="340" y2="305" stroke="#223447" stroke-width="2.2" />
+<text x="360" y="274" font-size="18" fill="#223447" font-weight="normal">Gauge350</text>
+<line x1="340" y1="305" x2="340" y2="440" stroke="#223447" stroke-width="2.2" />
+<text x="350" y="395" font-size="18" fill="#223447" font-weight="normal">B -&gt; W2</text>
+<line x1="90" y1="440" x2="610" y2="440" stroke="#223447" stroke-width="2.2" />
+<text x="500" y="432" font-size="18" fill="#223447" font-weight="normal">AGND</text>
+<line x1="340" y1="240" x2="570" y2="240" stroke="#223447" stroke-width="2.2" />
+<text x="405" y="226" font-size="18" fill="#223447" font-weight="normal">A -&gt; W3 sense</text>
+<text x="575" y="246" font-size="18" fill="#223447" font-weight="normal">VIN+</text>
+<line x1="500" y1="240" x2="500" y2="280" stroke="#223447" stroke-width="2.2" stroke-dasharray="7 5"/>
+<line x1="500" y1="280" x2="500" y2="290" stroke="#223447" stroke-width="2.2" />
+<rect x="488" y="290" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="500" y1="335" x2="500" y2="345" stroke="#223447" stroke-width="2.2" />
+<text x="520" y="314" font-size="18" fill="#223447" font-weight="normal">Rcal temp.</text>
+<line x1="500" y1="345" x2="500" y2="375" stroke="#223447" stroke-width="2.2" stroke-dasharray="7 5"/>
+<line x1="500" y1="375" x2="340" y2="375" stroke="#223447" stroke-width="2.2" stroke-dasharray="7 5"/>
+<circle cx="500" cy="240" r="4" fill="#223447"/>
+<circle cx="340" cy="375" r="4" fill="#223447"/>
+<line x1="130" y1="295" x2="230" y2="295" stroke="#223447" stroke-width="2.2" />
+<text x="165" y="282" font-size="18" fill="#223447" font-weight="normal">S- -&gt; VIN-</text>
+<rect x="40" y="460" width="605" height="95" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="55" y="489" font-size="21" fill="#223447" font-weight="bold">Shunt Rcal medido (100k/330k) em A/B</text>
+<text x="55" y="518" font-size="17" fill="#223447" font-weight="normal">Informar Rreal na UI. W1/W3 emA; VIN+ sóW3 no equipamento.</text>
+<text x="735" y="110" font-size="21" fill="#223447" font-weight="bold">H - CH0..2, JP_QH em VEXC (RA bypassado)</text>
+<line x1="790" y1="145" x2="1345" y2="145" stroke="#223447" stroke-width="2.2" />
+<text x="1200" y="136" font-size="18" fill="#223447" font-weight="normal">VEXC</text>
+<line x1="820" y1="145" x2="820" y2="170" stroke="#223447" stroke-width="2.2" />
+<line x1="820" y1="170" x2="820" y2="180" stroke="#223447" stroke-width="2.2" />
+<rect x="808" y="180" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="820" y1="225" x2="820" y2="235" stroke="#223447" stroke-width="2.2" />
+<text x="840" y="204" font-size="18" fill="#223447" font-weight="normal">RC1k</text>
+<line x1="820" y1="235" x2="820" y2="295" stroke="#223447" stroke-width="2.2" />
+<circle cx="820" cy="295" r="4" fill="#223447"/>
+<line x1="820" y1="295" x2="820" y2="305" stroke="#223447" stroke-width="2.2" />
+<rect x="808" y="305" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="820" y1="350" x2="820" y2="360" stroke="#223447" stroke-width="2.2" />
+<text x="840" y="329" font-size="18" fill="#223447" font-weight="normal">RD1k</text>
+<line x1="820" y1="360" x2="820" y2="440" stroke="#223447" stroke-width="2.2" />
+<line x1="1020" y1="145" x2="1020" y2="170" stroke="#223447" stroke-width="2.2" />
+<line x1="1020" y1="170" x2="1020" y2="180" stroke="#223447" stroke-width="2.2" />
+<rect x="1008" y="180" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="1020" y1="225" x2="1020" y2="235" stroke="#223447" stroke-width="2.2" />
+<text x="1040" y="204" font-size="18" fill="#223447" font-weight="normal">Gauge superior350</text>
+<line x1="1020" y1="235" x2="1020" y2="295" stroke="#223447" stroke-width="2.2" />
+<circle cx="1020" cy="295" r="4" fill="#223447"/>
+<line x1="1020" y1="295" x2="1020" y2="305" stroke="#223447" stroke-width="2.2" />
+<rect x="1008" y="305" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="1020" y1="350" x2="1020" y2="360" stroke="#223447" stroke-width="2.2" />
+<text x="1040" y="329" font-size="18" fill="#223447" font-weight="normal">Gauge inferior350</text>
+<line x1="1020" y1="360" x2="1020" y2="440" stroke="#223447" stroke-width="2.2" />
+<line x1="790" y1="440" x2="1345" y2="440" stroke="#223447" stroke-width="2.2" />
+<text x="1230" y="432" font-size="18" fill="#223447" font-weight="normal">AGND</text>
+<text x="990" y="160" font-size="17" fill="#223447" font-weight="normal">W1</text>
+<text x="990" y="400" font-size="17" fill="#223447" font-weight="normal">W2</text>
+<line x1="1020" y1="295" x2="1300" y2="295" stroke="#223447" stroke-width="2.2" />
+<text x="1090" y="277" font-size="18" fill="#223447" font-weight="normal">M -&gt; W3 sense</text>
+<text x="1305" y="301" font-size="18" fill="#223447" font-weight="normal">VIN+</text>
+<line x1="1220" y1="295" x2="1220" y2="320" stroke="#223447" stroke-width="2.2" stroke-dasharray="7 5"/>
+<line x1="1220" y1="320" x2="1220" y2="330" stroke="#223447" stroke-width="2.2" />
+<rect x="1208" y="330" width="24" height="45" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="1220" y1="375" x2="1220" y2="385" stroke="#223447" stroke-width="2.2" />
+<text x="1240" y="354" font-size="18" fill="#223447" font-weight="normal">Rcal temp.</text>
+<line x1="1220" y1="385" x2="1220" y2="415" stroke="#223447" stroke-width="2.2" stroke-dasharray="7 5"/>
+<line x1="1220" y1="415" x2="1020" y2="415" stroke="#223447" stroke-width="2.2" stroke-dasharray="7 5"/>
+<circle cx="1220" cy="295" r="4" fill="#223447"/>
+<circle cx="1020" cy="415" r="4" fill="#223447"/>
+<line x1="820" y1="295" x2="910" y2="295" stroke="#223447" stroke-width="2.2" />
+<text x="825" y="282" font-size="18" fill="#223447" font-weight="normal">S- -&gt; VIN-</text>
+<rect x="735" y="460" width="625" height="95" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="750" y="489" font-size="21" fill="#223447" font-weight="bold">Shunt Rcal medido: M / terminal inferior</text>
+<text x="750" y="518" font-size="17" fill="#223447" font-weight="normal">No gauge inferior remoto; informar Rreal na UI. Inferior</text>
+<text x="750" y="541" font-size="17" fill="#223447" font-weight="normal">tracionado -&gt; positivo.</text>
+<text x="40" y="595" font-size="22" fill="#223447" font-weight="bold">INA -&gt; Sallen-Key (repete6x) -&gt; P5</text>
+<rect x="40" y="650" width="180" height="160" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="55" y="679" font-size="21" fill="#223447" font-weight="bold">CJMCU-333</text>
+<text x="55" y="708" font-size="17" fill="#223447" font-weight="normal">VCC=VEXC</text>
+<text x="55" y="731" font-size="17" fill="#223447" font-weight="normal">GND=AGND</text>
+<text x="55" y="754" font-size="17" fill="#223447" font-weight="normal">Vref/3.3V abertos</text>
+<line x1="220" y1="710" x2="260" y2="710" stroke="#223447" stroke-width="2.2" />
+<rect x="260" y="698" width="80" height="24" fill="white" stroke="#223447" stroke-width="2"/>
+<text x="257" y="685" font-size="18" fill="#223447" font-weight="normal">R1 2.15k</text>
+<line x1="340" y1="710" x2="410" y2="710" stroke="#223447" stroke-width="2.2" />
+<circle cx="410" cy="710" r="4" fill="#223447"/>
+<text x="400" y="740" font-size="18" fill="#223447" font-weight="normal">X</text>
+<rect x="485" y="698" width="80" height="24" fill="white" stroke="#223447" stroke-width="2"/>
+<line x1="410" y1="710" x2="485" y2="710" stroke="#223447" stroke-width="2.2" />
+<line x1="565" y1="710" x2="650" y2="710" stroke="#223447" stroke-width="2.2" />
+<circle cx="650" cy="710" r="4" fill="#223447"/>
+<text x="480" y="685" font-size="18" fill="#223447" font-weight="normal">R2 2.15k</text>
+<text x="640" y="740" font-size="18" fill="#223447" font-weight="normal">Y</text>
+<line x1="650" y1="710" x2="790" y2="710" stroke="#223447" stroke-width="2.2" />
+<text x="760" y="699" font-size="18" fill="#223447" font-weight="normal">+</text>
+<polygon points="790,665 790,780 920,722" fill="#F2F6F9" stroke="#223447" stroke-width="2.2"/>
+<text x="798" y="649" font-size="18" fill="#223447" font-weight="normal">OPA seguidor</text>
+<line x1="920" y1="722" x2="1060" y2="722" stroke="#223447" stroke-width="2.2" />
+<circle cx="970" cy="722" r="4" fill="#223447"/>
+<text x="960" y="701" font-size="18" fill="#223447" font-weight="normal">OUT</text>
+<line x1="790" y1="758" x2="755" y2="758" stroke="#223447" stroke-width="2.2" />
+<text x="762" y="751" font-size="18" fill="#223447" font-weight="normal">-</text>
+<line x1="755" y1="758" x2="755" y2="835" stroke="#223447" stroke-width="2.2" />
+<line x1="755" y1="835" x2="970" y2="835" stroke="#223447" stroke-width="2.2" />
+<line x1="970" y1="835" x2="970" y2="722" stroke="#223447" stroke-width="2.2" />
+<line x1="650" y1="760" x2="650" y2="780" stroke="#223447" stroke-width="2.2" />
+<line x1="635" y1="780" x2="665" y2="780" stroke="#223447" stroke-width="2.2" />
+<line x1="635" y1="788" x2="665" y2="788" stroke="#223447" stroke-width="2.2" />
+<line x1="650" y1="788" x2="650" y2="815" stroke="#223447" stroke-width="2.2" />
+<text x="670" y="790" font-size="18" fill="#223447" font-weight="normal">C2 100n</text>
+<line x1="650" y1="710" x2="650" y2="760" stroke="#223447" stroke-width="2.2" />
+<line x1="650" y1="815" x2="650" y2="865" stroke="#223447" stroke-width="2.2" />
+<text x="605" y="890" font-size="18" fill="#223447" font-weight="normal">AGND</text>
+<line x1="410" y1="710" x2="410" y2="630" stroke="#223447" stroke-width="2.2" />
+<line x1="410" y1="630" x2="510" y2="630" stroke="#223447" stroke-width="2.2" />
+<line x1="510" y1="615" x2="510" y2="645" stroke="#223447" stroke-width="2.2" />
+<line x1="520" y1="615" x2="520" y2="645" stroke="#223447" stroke-width="2.2" />
+<line x1="520" y1="630" x2="970" y2="630" stroke="#223447" stroke-width="2.2" />
+<line x1="970" y1="630" x2="970" y2="722" stroke="#223447" stroke-width="2.2" />
+<text x="565" y="618" font-size="18" fill="#223447" font-weight="normal">C1 220n: X -&gt; OUT</text>
+<rect x="1060" y="650" width="300" height="180" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="1075" y="679" font-size="21" fill="#223447" font-weight="bold">P5 INn &lt;- OPA OUT</text>
+<text x="1075" y="708" font-size="17" fill="#223447" font-weight="normal">100R série /10k pull-down</text>
+<text x="1075" y="731" font-size="17" fill="#223447" font-weight="normal">Correção DC uma vez1.01</text>
+<text x="1075" y="754" font-size="17" fill="#223447" font-weight="normal">Y não liga ao ADC</text>
+<text x="1075" y="777" font-size="17" fill="#223447" font-weight="normal">OPA8=VEXC /4=AGND</text>
+<text x="40" y="919" font-size="18" fill="#223447" font-weight="normal">Monitor: VEXC -&gt;2.2k -&gt;MEX -&gt;2.2k -&gt;AGND; 100nMEX/AGND; OPA4A seguidorMEX -&gt;P5-15. ADC fator0.49505.</text>
+<text x="35" y="964" font-size="18" fill="#526171" font-weight="normal">SG6 rev.15/10/2026 | Montagem nominal; confirmar PCB/lote, continuidade e desempenho em bancada.</text>
+</svg>

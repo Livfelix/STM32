@@ -1,0 +1,11 @@
+.pio/
+.tools/
+__pycache__/
+*.py[cod]
+*.elf
+*.bin
+*.hex
+*.map
+tmp/
+.superpowers/
+*.inspect.ndjson

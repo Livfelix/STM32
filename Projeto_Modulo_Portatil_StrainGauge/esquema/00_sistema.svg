@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000" font-family="Arial, sans-serif"><rect width="1400" height="1000" fill="white"/>
+<text x="35" y="39" font-size="27" fill="#223447" font-weight="bold">00 - Sistema SG6: 6 entradas, 9 gauges</text>
+<text x="35" y="71" font-size="19" fill="#526171" font-weight="normal">CH0..2 meia ponte de flexão (H); CH3..5 quarto de ponte local (Q). G físico100, ADS PGA1.</text>
+<rect x="40" y="110" width="310" height="180" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="55" y="139" font-size="21" fill="#223447" font-weight="bold">3 pares H + 3 gauges Q</text>
+<text x="55" y="168" font-size="18" fill="#223447" font-weight="normal">Até1m, 4 vias + dreno</text>
+<text x="55" y="192" font-size="18" fill="#223447" font-weight="normal">3 ativas + 1 reserva isolada</text>
+<text x="55" y="216" font-size="18" fill="#223447" font-weight="normal">6 pares de 5 contatos</text>
+<text x="55" y="240" font-size="18" fill="#223447" font-weight="normal">Referência1k/1k por canal</text>
+<text x="55" y="264" font-size="18" fill="#223447" font-weight="normal">Dreno só no equipamento</text>
+<rect x="420" y="110" width="360" height="180" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="435" y="139" font-size="21" fill="#223447" font-weight="bold">6 CJMCU + 6 Sallen-Key</text>
+<text x="435" y="168" font-size="19" fill="#223447" font-weight="normal">VIN+ sense; VIN- referência</text>
+<text x="435" y="193" font-size="19" fill="#223447" font-weight="normal">Vref/3.3V abertos; G100 manual</text>
+<text x="435" y="218" font-size="19" fill="#223447" font-weight="normal">f0 499,08Hz / Q 0,74162</text>
+<text x="435" y="243" font-size="19" fill="#223447" font-weight="normal">−3dB 522,26Hz; 3 OPA duais</text>
+<rect x="860" y="110" width="490" height="180" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="875" y="139" font-size="21" fill="#223447" font-weight="bold">Placa integrada ADC + STM32</text>
+<text x="875" y="168" font-size="19" fill="#223447" font-weight="normal">P5 IN0..5: saídas OPA; IN6 reserva</text>
+<text x="875" y="193" font-size="19" fill="#223447" font-weight="normal">IN7: monitor bufferizado, 4º OPA</text>
+<text x="875" y="218" font-size="19" fill="#223447" font-weight="normal">SPI2 interno PB12..15/DRDY10/RST11</text>
+<text x="875" y="243" font-size="19" fill="#223447" font-weight="normal">VREF ADR4525=2.5V; AINCOM AGND</text>
+<line x1="350" y1="195" x2="420" y2="195" stroke="#223447" stroke-width="2.2" />
+<line x1="780" y1="195" x2="860" y2="195" stroke="#223447" stroke-width="2.2" />
+<rect x="860" y="350" width="490" height="135" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="875" y="379" font-size="21" fill="#223447" font-weight="bold">SPI1: tela, toque e SD externo</text>
+<text x="875" y="408" font-size="19" fill="#223447" font-weight="normal">PA5/6/7; CS PA4/PA0/PA8</text>
+<text x="875" y="433" font-size="19" fill="#223447" font-weight="normal">LCD5V/J1 aberto/IO3.3V; SD3.3V</text>
+<text x="875" y="458" font-size="19" fill="#223447" font-weight="normal">SD BIN3 integral; slot tela sem uso</text>
+<line x1="1100" y1="290" x2="1100" y2="350" stroke="#223447" stroke-width="2.2" />
+<rect x="860" y="555" width="490" height="130" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="875" y="584" font-size="21" fill="#223447" font-weight="bold">PC via USB-UART3.3V</text>
+<text x="875" y="613" font-size="19" fill="#223447" font-weight="normal">PA9/P4-1 -&gt; RX; P4-3 -&gt; GND</text>
+<text x="875" y="638" font-size="19" fill="#223447" font-weight="normal">TX/VCC do adaptador desconectados</text>
+<text x="875" y="663" font-size="19" fill="#223447" font-weight="normal">V2 CRC, normal1000/s; trigger prioritário</text>
+<line x1="1325" y1="290" x2="1380" y2="290" stroke="#223447" stroke-width="2.2" />
+<line x1="1380" y1="290" x2="1380" y2="615" stroke="#223447" stroke-width="2.2" />
+<line x1="1380" y1="615" x2="1350" y2="615" stroke="#223447" stroke-width="2.2" />
+<rect x="40" y="350" width="740" height="135" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="55" y="379" font-size="21" fill="#223447" font-weight="bold">Energia e distribuição</text>
+<text x="55" y="408" font-size="19" fill="#223447" font-weight="normal">OUT+ protegido -&gt; chave -&gt; SW_BAT+ -&gt; MT3608 -&gt; 5V J2/LCD</text>
+<text x="55" y="433" font-size="19" fill="#223447" font-weight="normal">C1+ apósL1 -&gt; VEXC: pontes, CJ, OPA. Nunca bypass deL1.</text>
+<text x="55" y="458" font-size="19" fill="#223447" font-weight="normal">AGND emP5; retornos digitais/potência J2/P9-2; R1 onboard une terras</text>
+<rect x="40" y="555" width="740" height="130" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="55" y="584" font-size="21" fill="#223447" font-weight="bold">Monitor VEXC / bateria</text>
+<text x="55" y="613" font-size="19" fill="#223447" font-weight="normal">VEXC -&gt; 2.2k/2.2k + OPA -&gt; IN7; 1/8 scans, deriva lenta</text>
+<text x="55" y="638" font-size="19" fill="#223447" font-weight="normal">SW_BAT+ pós-chave -&gt; 10k/10k +100n -&gt; PB0/P8-11</text>
+<text x="55" y="663" font-size="19" fill="#223447" font-weight="normal">&lt;3,50V500ms pisca; &lt;3,35V ou monitor inválido500ms: fecha</text>
+<rect x="40" y="730" width="1310" height="195" rx="9" fill="#F2F6F9" stroke="#7F9AAA"/>
+<text x="55" y="759" font-size="21" fill="#223447" font-weight="bold">Operação e limites</text>
+<text x="55" y="788" font-size="19" fill="#223447" font-weight="normal">Ganho físico -&gt; BIAS (W3 fora/VIN+ em VIN-) -&gt; SAVEFLASH; confirmar FLASH/CONCLUIDO antes de OFF.</text>
+<text x="55" y="813" font-size="19" fill="#223447" font-weight="normal">OFF/restaurar W3/religar -&gt; conferir configuração, BIAS OK e bias_v_f32 -&gt; ZERO -&gt; SHUNT -&gt; retirar/retorno -&gt; SAVE final.</text>
+<text x="55" y="838" font-size="19" fill="#223447" font-weight="normal">Erro de SAVE/restauração: interromper e corrigir. SD contínuo; PC extrai janela. STOP/close antesOFF/cartão.</text>
+<text x="55" y="863" font-size="19" fill="#223447" font-weight="normal">Carga sóOFF; LEDs TP4056 visíveis. RÁPIDO: BIN3/busy70ms. Banda/alias/autonomia exigem bancada.</text>
+<text x="35" y="964" font-size="18" fill="#526171" font-weight="normal">SG6 rev.15/10/2026 | Montagem nominal; confirmar PCB/lote, continuidade e desempenho em bancada.</text>
+</svg>
